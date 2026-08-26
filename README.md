@@ -4,9 +4,9 @@ Official public website, privacy policy, and customer support resources for the 
 
 ## Official resources
 
-- Product website: https://ivanvigor.github.io/BlinkEyes_Docs/
-- Privacy Policy: https://ivanvigor.github.io/BlinkEyes_Docs/privacy/
-- Customer Support: https://ivanvigor.github.io/BlinkEyes_Docs/support/
+- Product website: https://ivanvigor.github.io/BlinkEyes_Public/
+- Privacy Policy: https://ivanvigor.github.io/BlinkEyes_Public/privacy/
+- Customer Support: https://ivanvigor.github.io/BlinkEyes_Public/support/
 
 ## Product principles
 
