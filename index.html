@@ -3,105 +3,101 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Blink Eyes is a private, on-device blink and screen-break reminder for Mac.">
-  <meta name="theme-color" content="#10251e">
-  <title>Blink Eyes · A quiet blink reminder for Mac</title>
+  <meta name="description" content="Blink Eyes is a private, on-device blink and screen-break companion for Mac.">
+  <meta name="theme-color" content="#07110e">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Blink Eyes · Focus, with a gentler rhythm">
+  <meta property="og:description" content="Private blink awareness and screen-break reminders, processed entirely on your Mac.">
+  <meta property="og:image" content="https://ivanvigor.github.io/BlinkEyes_Public/assets/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Blink Eyes · Focus, with a gentler rhythm">
+  <meta name="twitter:description" content="Private blink awareness and screen-break reminders, processed entirely on your Mac.">
+  <meta name="twitter:image" content="https://ivanvigor.github.io/BlinkEyes_Public/assets/og.png">
+  <title>Blink Eyes · Focus, with a gentler rhythm</title>
   <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <nav class="nav" aria-label="Main navigation">
-      <a class="brand" href="./" aria-label="Blink Eyes home"><span class="brand-mark" aria-hidden="true"></span>Blink Eyes</a>
-      <div class="nav-links"><a href="#features">Features</a><a href="#settings">Settings</a><a href="privacy/">Privacy</a><a href="support/">Support</a></div>
+      <a class="brand" href="./" aria-label="Blink Eyes home"><span class="brand-signal" aria-hidden="true"><i></i><i></i><i></i></span><span>Blink Eyes</span></a>
+      <div class="nav-links"><a href="#product">Product</a><a href="#engine">How it works</a><a href="docs/">Docs</a><a href="privacy/">Privacy</a></div>
+      <a class="nav-cta" href="support/">Support <span aria-hidden="true">↗</span></a>
     </nav>
   </header>
 
-  <main>
+  <main id="main">
     <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-grid" aria-hidden="true"></div>
       <div class="container hero-layout">
         <div class="hero-copy">
-          <p class="eyebrow">For focused Mac days</p>
-          <h1 id="hero-title">Look up.<br><em>Blink.</em><br>Keep going.</h1>
-          <p class="lead">Blink Eyes is a calm, private reminder that helps you notice your blinking rhythm and take screen breaks before your day slips into autopilot.</p>
-          <div class="hero-actions">
-            <a class="button" href="#features">Explore Blink Eyes <span aria-hidden="true">↓</span></a>
-            <a class="button ghost" href="support/">Get support</a>
-          </div>
-          <p class="hero-fineprint">Built for macOS · Camera analysis stays on your Mac</p>
+          <p class="eyebrow"><span class="status-dot"></span> Native on-device intelligence</p>
+          <h1 id="hero-title">Focus, with a<br><span>gentler rhythm.</span></h1>
+          <p class="lead">Blink Eyes turns local camera analysis into quiet, configurable cues for long sessions at your Mac—without turning your face into data.</p>
+          <div class="hero-actions"><a class="button" href="#product">Explore the experience <span aria-hidden="true">↓</span></a><a class="button ghost" href="docs/">Open product guide <span aria-hidden="true">↗</span></a></div>
+          <div class="hero-proof" aria-label="Product principles"><span><i class="proof-icon"></i>Local processing</span><span><i class="proof-icon"></i>No cloud account</span><span><i class="proof-icon"></i>Built for macOS 14+</span></div>
         </div>
-        <div class="hero-art" aria-label="Professional working at a desktop monitor with a subtle blink-awareness display">
-          <img src="assets/blink-eyes-workspace.png" alt="Professional working at a desktop monitor in a calm green and warm-toned workspace.">
-          <div class="floating-chip"><strong><span class="pulse" aria-hidden="true"></span>On-device awareness</strong><span>Quietly working in the background</span></div>
+
+        <div class="hero-visual" aria-label="Blink Eyes working locally during a focused Mac session">
+          <div class="visual-frame">
+            <img src="assets/blink-eyes-workspace.png" alt="A focused Mac workspace with a private blink-awareness interface.">
+            <div class="visual-shade"></div>
+            <div class="capture-corners" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+            <div class="signal-card">
+              <div class="signal-head"><span>Live rhythm</span><b><i></i> On device</b></div>
+              <div class="signal-value"><strong>18</strong><span>estimated blinks<br>last 60 seconds</span></div>
+              <div class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            </div>
+            <div class="frame-label frame-label-top">VISION / MEMORY ONLY</div>
+            <div class="frame-label frame-label-bottom">CALM SIGNAL · NO RECORDING</div>
+          </div>
         </div>
       </div>
+      <div class="container signal-strip" aria-label="Core product facts"><span>01 <b>Rolling 60-second signal</b></span><span>02 <b>Bilateral blink detection</b></span><span>03 <b>30-day local aggregates</b></span><span>04 <b>Zero camera uploads</b></span></div>
     </section>
 
-    <div class="ticker" aria-label="Blink Eyes values"><div class="ticker-track"><span>Local by design</span><i class="ticker-dot" aria-hidden="true"></i><span>Your camera, your control</span><i class="ticker-dot" aria-hidden="true"></i><span>Built for macOS</span><i class="ticker-dot" aria-hidden="true"></i><span>No accounts or analytics</span></div></div>
-
-    <section class="intro" id="features">
+    <section class="product" id="product" aria-labelledby="product-title">
       <div class="container">
-        <div class="split-copy">
-          <div><p class="section-label">A more considered nudge</p><h2 class="section-heading">One quiet layer for long sessions at the screen.</h2></div>
-          <p class="lead">Blink Eyes lives where your attention already is: the menu bar. It keeps the feedback gentle, readable, and easy to shape around your own working rhythm.</p>
+        <div class="section-intro">
+          <div><p class="section-label">The product layer</p><h2 id="product-title">Useful enough to notice.<br>Quiet enough to keep working.</h2></div>
+          <p class="lead">A compact menu-bar companion designed around attention, not interruption. The essential signal stays visible; everything else waits until you ask for it.</p>
         </div>
-        <div class="feature-grid">
-          <article class="feature-card"><span class="feature-number">01 · LIVE RHYTHM</span><h3>Your recent blink pace, at a glance.</h3><p>The menu bar shows the rolling blink count from the last 60 seconds, with a calm visual confirmation after a recognized blink.</p><div class="eye-line" aria-hidden="true"></div></article>
-          <article class="feature-card"><span class="feature-number">02 · GENTLE REMINDERS</span><h3>A nudge when you have been still too long.</h3><p>Choose a personal interval. The centered reminder can be adjusted by timing, sensitivity, and optional fade strength.</p><div class="ring" aria-hidden="true"></div></article>
-          <article class="feature-card"><span class="feature-number">03 · SCREEN BREAKS</span><h3>The 20-20-20 rule, on your terms.</h3><p>Enable a separate active-time break reminder when it suits your routine. It is off by default.</p><div class="steps" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="configuration" id="settings" aria-labelledby="settings-title">
-      <div class="container config-layout">
-        <div class="config-copy">
-          <p class="section-label">Designed around you</p>
-          <h2 class="section-heading" id="settings-title">A few clear controls for your routine.</h2>
-          <p class="lead">Every workspace, camera angle, lighting condition, and attention span is different. Blink Eyes keeps the controls clear so the reminders feel useful rather than intrusive.</p>
-          <div class="configuration-list" aria-label="Configurable options">
-            <div><span>Camera input</span><strong>Choose by device name</strong></div>
-            <div><span>Reminder interval</span><strong>Custom seconds</strong></div>
-            <div><span>Blink sensitivity</span><strong>0–100% control</strong></div>
-            <div><span>Partial blinks</span><strong>Optional detection</strong></div>
-            <div><span>20-20-20</span><strong>Optional active timer</strong></div>
-          </div>
-        </div>
-        <div class="settings-window" aria-label="Illustration of Blink Eyes settings">
-          <div class="window-top"><i></i><i></i><i></i><span>Blink Eyes settings</span></div>
-          <div class="settings-inner">
-            <h3>Personalise your rhythm</h3>
-            <div class="control"><div class="control-head"><span>Time between reminders</span><b>7.0 s</b></div><div class="slider" style="--position: 43%"></div></div>
-            <div class="control"><div class="control-head"><span>Blink sensitivity</span><b>Balanced</b></div><div class="slider" style="--position: 50%"></div></div>
-            <div class="control"><div class="control-head"><span>Screen fade strength</span><b>50%</b></div><div class="slider" style="--position: 50%"></div></div>
-            <div class="control"><div class="toggle-row"><span>Enable 20-20-20 breaks</span><i class="switch off" aria-label="Disabled illustration"></i></div></div>
-            <div class="toggle-row"><span>Show a gentle reminder</span><i class="switch" aria-label="Enabled illustration"></i></div>
-          </div>
+        <div class="bento-grid">
+          <article class="bento-card rhythm-card"><div class="card-top"><span class="card-index">01 / RHYTHM</span><span class="card-state"><i></i> Live</span></div><div class="menubar-demo" aria-hidden="true"><span>Blink Eyes</span><strong>18</strong></div><h3>Your recent pace, one glance away.</h3><p>The menu-bar number reflects the previous 60 seconds and briefly responds after a validated full blink.</p></article>
+          <article class="bento-card reminder-card"><div class="card-top"><span class="card-index">02 / REMINDERS</span><span>Configurable</span></div><div class="reminder-orbit" aria-hidden="true"><span>blink</span></div><h3>A cue that arrives without taking over.</h3><p>Set your own interval, sensitivity and fade strength. A full bilateral blink clears the reminder and resets the cycle.</p></article>
+          <article class="bento-card settings-card"><div class="card-top"><span class="card-index">03 / CONTROL</span><span>macOS native</span></div><div class="mini-settings" aria-label="Illustration of Blink Eyes controls"><div><span>Sensitivity</span><b>50%</b></div><i class="mini-track" style="--fill:50%"></i><div><span>Reminder after</span><b>7 sec</b></div><i class="mini-track" style="--fill:38%"></i><div class="mini-toggle"><span>20-20-20 break</span><i></i></div></div><h3>Calibrated to your setup.</h3><p>Adapt to your camera, lighting and work rhythm with a small set of clear controls.</p></article>
+          <article class="bento-card stats-card"><div class="card-top"><span class="card-index">04 / HISTORY</span><span>Local · 30 days</span></div><div class="stats-visual" aria-hidden="true"><i style="--h:34%"></i><i style="--h:51%"></i><i style="--h:44%"></i><i style="--h:72%"></i><i style="--h:59%"></i><i style="--h:82%"></i><i style="--h:68%"></i><i style="--h:90%"></i><i style="--h:73%"></i><i style="--h:84%"></i></div><h3>Trends without a timeline of you.</h3><p>Only aggregate counts and active duration are retained locally. Clear history at any time.</p></article>
         </div>
       </div>
     </section>
 
-    <section class="privacy" aria-labelledby="privacy-title">
+    <section class="engine" id="engine" aria-labelledby="engine-title">
+      <div class="container engine-layout">
+        <div class="engine-copy"><p class="section-label">Local intelligence</p><h2 id="engine-title">A closed loop<br>inside your Mac.</h2><p class="lead">Apple AVFoundation captures the selected camera and Vision estimates local eye landmarks. Frames remain in memory, the blink state is validated, and only the reminder reaches you.</p><a class="text-link" href="docs/#recognition">Explore recognition details <span aria-hidden="true">↗</span></a></div>
+        <div class="pipeline" aria-label="Local processing pipeline">
+          <div class="pipeline-line" aria-hidden="true"></div>
+          <article><span>01</span><div><b>Selected camera</b><p>Approx. 640×480 · late frames discarded</p></div><i class="node"></i></article>
+          <article><span>02</span><div><b>Apple Vision</b><p>Local eye contours and pose estimates</p></div><i class="node"></i></article>
+          <article><span>03</span><div><b>Bilateral validation</b><p>Close → reopen sequence on both eyes</p></div><i class="node"></i></article>
+          <article><span>04</span><div><b>Private response</b><p>Rolling value, reminder or local aggregate</p></div><i class="node active"></i></article>
+          <div class="pipeline-seal"><span>CAMERA NETWORK PATH</span><strong>NONE</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="docs-preview" aria-labelledby="docs-title"><div class="container"><div class="docs-shell"><div class="docs-sidebar" aria-hidden="true"><b>BLINK EYES / DOCS</b><span class="active">Overview</span><span>Menu bar</span><span>Settings</span><span>Recognition</span><span>Statistics</span><span>Troubleshooting</span></div><div class="docs-content"><p class="section-label">Documentation</p><h2 id="docs-title">Know what the signal means.</h2><p class="lead">A concise guide to the rolling value, sensitivity, recognition conditions, local statistics and common troubleshooting steps.</p><div class="docs-links"><a href="docs/"><span><i>01</i><b>Product guide</b></span><em>Everything you need to get oriented</em><strong>↗</strong></a><a href="privacy/"><span><i>02</i><b>Privacy architecture</b></span><em>Exactly what stays local</em><strong>↗</strong></a><a href="support/"><span><i>03</i><b>Support</b></span><em>Practical help from a human</em><strong>↗</strong></a></div></div></div></div></section>
+
+    <section class="privacy-panel" aria-labelledby="privacy-title">
+      <div class="privacy-grid" aria-hidden="true"></div>
       <div class="container privacy-layout">
-        <div><p class="section-label">Privacy is the feature</p><h2 class="section-heading" id="privacy-title">A local loop, not a data pipeline.</h2><p class="lead">Blink Eyes processes the selected camera only in memory on your Mac. No account to create. No cloud destination. No advertising profile waiting at the other end.</p><p class="hero-actions"><a class="button ghost" href="privacy/">Read the Privacy Policy</a></p></div>
-        <div class="local-path" aria-label="Local processing flow">
-          <div class="path-item"><b>1 · Your selected camera</b><p>The app requests camera permission only for local blink awareness and the optional recognition preview.</p></div>
-          <div class="path-item"><b>2 · On-device analysis</b><p>Frames and eye landmarks are processed in memory on the Mac while monitoring is active.</p></div>
-          <div class="path-item"><b>3 · Your private reminder</b><p>Only local settings and technical preferences remain in the app container. Camera frames are not recorded or uploaded.</p></div>
-        </div>
+        <div><p class="section-label">Privacy architecture</p><h2 id="privacy-title">Your camera is an input.<br><span>Never an export.</span></h2><p class="lead">Frames and landmarks are processed in memory and discarded. Blink Eyes has no proprietary account, analytics, advertising, cloud sync, remote AI or developer server.</p><div class="hero-actions"><a class="button light" href="privacy/">Read the full policy <span aria-hidden="true">↗</span></a></div></div>
+        <div class="privacy-matrix" aria-label="Privacy facts"><div><span>Camera frames</span><b>Memory only</b><i>Never recorded</i></div><div><span>Eye landmarks</span><b>On device</b><i>Discarded after use</i></div><div><span>Usage analytics</span><b>None</b><i>No telemetry SDK</i></div><div><span>Statistics</span><b>Local aggregates</b><i>30-day retention</i></div></div>
       </div>
     </section>
 
-    <section class="closing">
-      <div class="container">
-        <p class="section-label">A quieter screen routine starts small</p>
-        <h2 class="section-heading">Add a small pause to focused work, one blink at a time.</h2>
-        <p class="lead">Blink Eyes is built for people who spend long, focused days on a Mac and want a discreet cue to pause, blink, and look away.</p>
-        <div class="hero-actions"><a class="button" href="support/">Support &amp; feedback <span aria-hidden="true">↗</span></a><a class="button ghost" href="privacy/">Privacy first</a></div>
-        <p class="closing-note">Blink Eyes is a productivity reminder and is not intended for medical use. Blink-rate results are estimates, not health measurements.</p>
-      </div>
-    </section>
+    <section class="closing"><div class="container closing-inner"><div><p class="section-label">Blink Eyes for macOS</p><h2>A small signal for<br>long focused days.</h2></div><div><p class="lead">Private by architecture. Adjustable by design. Present only when it helps.</p><div class="hero-actions"><a class="button" href="docs/">Read the guide</a><a class="button ghost" href="support/">Contact support</a></div></div></div><p class="container legal-note">Blink Eyes is a productivity reminder and is not intended for medical use. Blink-rate results are estimates, not health measurements.</p></section>
   </main>
 
-  <footer class="site-footer"><div class="container footer-layout"><a class="brand" href="./"><span class="brand-mark" aria-hidden="true"></span>Blink Eyes</a><p>Private screen-habit support for macOS.</p><div class="footer-links"><a href="privacy/">Privacy</a><a href="support/">Support</a></div></div></footer>
+  <footer class="site-footer"><div class="container footer-layout"><a class="brand" href="./"><span class="brand-signal" aria-hidden="true"><i></i><i></i><i></i></span><span>Blink Eyes</span></a><p>Private screen-habit support for macOS.</p><div class="footer-links"><a href="docs/">Docs</a><a href="privacy/">Privacy</a><a href="support/">Support</a></div></div></footer>
 </body>
 </html>
