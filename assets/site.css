@@ -352,3 +352,75 @@ main.compact-page { padding-bottom: 70px; padding-top: 58px; }
   .code-key { overflow-wrap: anywhere; }
   [id] { scroll-margin-top: 140px; }
 }
+
+/* Feature explanations use real product behaviour, with clearly labelled artwork. */
+.product-illustration { margin: 0; }
+.product-illustration figcaption { color: var(--muted); font-size: .7rem; line-height: 1.5; margin: 15px 10px 0; }
+.feature-grid { display: grid; gap: 16px; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 42px; }
+.feature-card { background: #f7f8f3; border: 1px solid var(--line-dark); border-radius: var(--radius); min-width: 0; padding: clamp(24px, 3vw, 36px); }
+.feature-card .card-index { font-family: var(--mono); font-size: .64rem; letter-spacing: .09em; }
+.feature-highlight { border-bottom: 1px solid var(--line-dark); font-size: clamp(2rem, 3.5vw, 3.1rem); font-weight: 550; letter-spacing: -.05em; line-height: 1.15; margin: 28px 0; padding-bottom: 26px; }
+.feature-highlight span { color: var(--muted-dark); display: block; font-family: var(--mono); font-size: .68rem; font-weight: 400; letter-spacing: .01em; line-height: 1.5; margin-top: 8px; }
+.feature-card h3 { font-size: clamp(1.5rem, 2.4vw, 2rem); font-weight: 550; letter-spacing: -.04em; line-height: 1.15; margin: 0 0 14px; }
+.feature-card p { color: #586961; font-size: .93rem; line-height: 1.65; margin-bottom: 0; }
+.feature-card-dark { background: var(--ink); color: var(--cream); }
+.feature-card-dark .card-index { color: var(--lime); }
+.feature-card-dark .feature-highlight { border-color: var(--line); color: var(--lime); }
+.feature-card-dark .feature-highlight span, .feature-card-dark p { color: #a5b6ab; }
+.feature-periods { font-size: clamp(1.6rem, 3vw, 2.65rem); }
+.settings-overview { margin: 24px 0 0; }
+.settings-overview > div { border-top: 1px solid var(--line); padding: 12px 0; }
+.settings-overview dt { font-size: .85rem; font-weight: 600; }
+.settings-overview dd { color: var(--muted); font-size: .82rem; line-height: 1.6; margin: 4px 0 0; }
+@media (max-width: 980px) and (min-width: 741px) {
+  .product-illustration .visual-frame { height: auto; }
+}
+@media (max-width: 740px) {
+  .feature-grid { grid-template-columns: 1fr; margin-top: 30px; }
+}
+
+/* A concise overview of personalisation and privacy; decorative marks, not app UI. */
+.made-for-you { background: var(--night); border-bottom: 1px solid var(--line); padding: 88px 0; }
+.assurance-grid { display: grid; gap: 18px; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 42px; }
+.assurance-card { background: var(--night-2); border: 1px solid var(--line); border-radius: 24px; min-width: 0; padding: clamp(24px, 3.5vw, 42px); }
+.personal-card { background: radial-gradient(ellipse at 100% 0, rgba(177,217,123,.1), transparent 62%), var(--night-2); }
+.assurance-top { align-items: center; display: flex; gap: 16px; justify-content: space-between; min-height: 42px; }
+.detail-label { color: var(--lime); font-family: var(--mono); font-size: .65rem; letter-spacing: .1em; line-height: 1.5; text-transform: uppercase; }
+.assurance-card h3 { font-size: clamp(2rem, 3.7vw, 3.2rem); font-weight: 550; letter-spacing: -.055em; line-height: 1.04; margin: 30px 0 20px; }
+.assurance-card > p { color: var(--muted); font-size: .95rem; line-height: 1.65; margin-bottom: 0; max-width: 440px; }
+.assurance-card h4 { color: var(--cream); font-size: .85rem; font-weight: 600; margin: 28px 0 14px; }
+.control-options { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 0; padding: 0; }
+.control-options li { background: rgba(177,217,123,.045); border: 1px solid var(--line); border-radius: 9px; color: #bdcdbf; font-size: .77rem; line-height: 1.5; padding: 8px 11px; }
+.assurance-card .detail-note { font-size: .78rem; margin-top: 22px; }
+.calibration-mark { align-items: center; border: 1px solid var(--line); border-radius: 50%; display: flex; flex: 0 0 42px; height: 42px; justify-content: center; }
+.calibration-mark i { border: 1px solid var(--lime); border-radius: 50%; height: 22px; position: relative; width: 22px; }
+.calibration-mark i::after { background: var(--lime); border-radius: 50%; content: ""; inset: 6px; position: absolute; }
+.privacy-lock { color: var(--lime); flex: 0 0 32px; }
+.privacy-promises { list-style: none; margin: 24px 0; padding: 0; }
+.privacy-promises li { border-top: 1px solid var(--line); padding: 14px 0; }
+.privacy-promises strong, .privacy-promises span { display: block; font-size: .82rem; line-height: 1.55; }
+.privacy-promises strong { font-weight: 600; }
+.privacy-promises span { color: var(--muted); margin-top: 3px; }
+.detail-link { align-items: center; color: var(--lime); display: inline-flex; font-size: .82rem; gap: 12px; min-height: 44px; text-underline-offset: 5px; }
+.detail-link:hover { color: var(--lime-hi); }
+@media (max-width: 740px) {
+  .made-for-you { padding: 60px 0; }
+  .assurance-grid { grid-template-columns: 1fr; margin-top: 30px; }
+}
+
+/* Marketing landing: a single, prominent path to the app. */
+.marketing-signal .signal-value { align-items: flex-start; flex-direction: column; gap: 10px; }
+.marketing-signal .signal-value strong { font-size: clamp(1.7rem, 3vw, 2.4rem); letter-spacing: -.055em; }
+.marketing-signal .signal-value span { font-size: .78rem; }
+.download-section { background: radial-gradient(ellipse at 50% 100%, #193b26, transparent 65%), var(--night-2); padding: 86px 0; }
+.download-inner { text-align: center; }
+.download-inner .lead { margin: 24px auto 0; }
+.download-inner .hero-actions { justify-content: center; }
+.download-requirements, .download-status { color: var(--muted); font-size: .75rem; line-height: 1.6; margin: 18px 0 0; }
+.download-button { font-family: inherit; font-size: .92rem; min-height: 52px; padding: 0 28px; }
+.download-button:disabled { cursor: not-allowed; opacity: .65; transform: none; }
+.feature-trio .break-time { font-size: clamp(2.2rem, 4vw, 3.8rem); }
+@media (max-width: 470px) {
+  .nav-cta.conversion-link { font-size: .7rem; height: auto; min-height: 36px; padding: 7px 10px; width: auto; }
+  .download-section { padding: 60px 0; }
+}

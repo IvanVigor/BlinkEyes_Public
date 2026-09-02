@@ -1,20 +1,17 @@
 # Blink Eyes
 
-Official product website, public documentation, privacy policy, and customer support resources for the Blink Eyes macOS application.
+Official marketing website, privacy policy and customer support for Blink Eyes on Mac.
 
-## Official resources
+Blink Eyes shows your recent blink-rate estimate in the Mac menu bar, offers configurable visual reminders and optional 20-20-20 break cues, and lets you explore your activity in Statistics. Settings include camera selection, reminder timing, sensitivity, background dimming and break intervals.
 
-- Product website: https://ivanvigor.github.io/BlinkEyes_Public/
-- Product Guide: https://ivanvigor.github.io/BlinkEyes_Public/docs/
-- Privacy Policy: https://ivanvigor.github.io/BlinkEyes_Public/privacy/
-- Customer Support: https://ivanvigor.github.io/BlinkEyes_Public/support/
+## Official pages
 
-## Product principles
+- [Discover Blink Eyes](https://ivanvigor.github.io/BlinkEyes_Public/)
+- [Privacy Policy](https://ivanvigor.github.io/BlinkEyes_Public/privacy/)
+- [Support](https://ivanvigor.github.io/BlinkEyes_Public/support/)
 
-Blink Eyes is a local macOS productivity reminder for blink timing and screen-break cues. Camera analysis is performed locally on the user's Mac. The application has no proprietary account, advertising, analytics, cloud processing, remote AI, or developer server. Apple StoreKit provides the system commerce connection and receives no camera or blink data from Blink Eyes.
+The former documentation URL redirects to the product landing page.
 
-## Contact
+Contact: [info@kerny.it](mailto:info@kerny.it)
 
-Customer support and privacy contact: [info@kerny.it](mailto:info@kerny.it)
-
-Blink Eyes is not intended for medical use. Blink-rate results are estimates, not health measurements.
+Blink Eyes is a productivity reminder, not intended for medical use. Blink estimates are not health measurements.
