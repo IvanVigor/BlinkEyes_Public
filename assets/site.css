@@ -399,16 +399,72 @@ main.compact-page { padding-bottom: 70px; padding-top: 58px; }
   .assurance-grid { grid-template-columns: 1fr; margin-top: 30px; }
 }
 
-/* Marketing landing: a single, prominent path to the app. */
-.download-section { background: radial-gradient(ellipse at 50% 100%, #193b26, transparent 65%), var(--night-2); padding: 86px 0; }
+/* Product screens and a continuous dark landing page. */
+.product { background: radial-gradient(ellipse at 88% 8%, rgba(82, 132, 77, .14), transparent 34%), #091510; color: var(--cream); }
+.product .section-label { color: var(--lime); }
+.feature-card { background: #11221a; border-color: var(--line); }
+.feature-card .card-index { color: var(--lime); }
+.feature-highlight { border-color: var(--line); color: var(--cream); }
+.feature-highlight span, .feature-card p { color: #a7b8ad; }
+.feature-card-dark { background: linear-gradient(145deg, #183220, #0d1d15); border-color: rgba(199, 239, 143, .28); }
+.product-disclaimer { background: #091510; color: #a7b8ad; max-width: none; padding-left: max(32px, calc((100vw - 1240px) / 2 + 32px)); padding-right: max(32px, calc((100vw - 1240px) / 2 + 32px)); }
+.site-footer { background: #07110e; border-color: var(--line); color: var(--cream); }
+.footer-layout p, .footer-links a { color: #9aaba0; }
+
+.app-shot { margin: 0; min-width: 0; }
+.app-shot-frame { background: #08130e; border: 1px solid rgba(199, 239, 143, .25); border-radius: 25px; box-shadow: 0 32px 80px rgba(0, 0, 0, .36); overflow: hidden; }
+.app-shot img { height: auto; width: 100%; }
+.app-shot figcaption { color: #8fa198; font-family: var(--mono); font-size: .69rem; letter-spacing: .04em; line-height: 1.5; margin-top: 14px; }
+.menu-shot { margin-left: auto; max-width: 530px; transform: rotate(1.5deg); }
+.menu-shot .app-shot-frame { background: #0d4665; }
+.menu-shot img { display: block; }
+
+.customise-layout { align-items: start; display: grid; gap: clamp(20px, 4vw, 62px); grid-template-columns: minmax(0, .9fr) minmax(360px, 1.1fr); margin-top: 42px; }
+.customise-layout .personal-card { min-height: 100%; }
+.settings-shot { align-self: stretch; }
+.settings-shot .app-shot-frame { background: #09110d; padding: 10px; }
+.settings-shot img { border-radius: 16px; }
+.calibration-band { align-items: center; background: linear-gradient(115deg, rgba(177, 217, 123, .08), transparent 50%), #0a1712; border: 1px solid var(--line); border-radius: 24px; display: grid; gap: clamp(24px, 5vw, 70px); grid-template-columns: 1.12fr .88fr; margin-top: 18px; overflow: hidden; padding: clamp(18px, 2.4vw, 30px); }
+.calibration-shot .app-shot-frame { border-radius: 16px; box-shadow: none; }
+.calibration-copy { padding-right: clamp(0px, 3vw, 28px); }
+.calibration-copy h3 { font-size: clamp(2rem, 3.5vw, 3.35rem); font-weight: 550; letter-spacing: -.055em; line-height: 1.02; margin: 20px 0; }
+.calibration-copy p { color: var(--muted); font-size: .98rem; line-height: 1.7; margin: 0; }
+.privacy-grid-row { display: block; margin-top: 18px; }
+.privacy-grid-row .privacy-card { margin: 0 auto; max-width: 780px; }
+
+/* A clear, honest access invitation. */
+.download-section { background: radial-gradient(ellipse at 50% 100%, #234c30, transparent 65%), #091510; border-top: 1px solid var(--line); padding: 94px 0; }
 .download-inner { text-align: center; }
 .download-inner .lead { margin: 24px auto 0; }
 .download-inner .hero-actions { justify-content: center; }
 .download-requirements, .download-status { color: var(--muted); font-size: .75rem; line-height: 1.6; margin: 18px 0 0; }
 .download-button { font-family: inherit; font-size: .92rem; min-height: 52px; padding: 0 28px; }
 .download-button:disabled { cursor: not-allowed; opacity: .65; transform: none; }
+.access-card { align-items: center; background: rgba(7, 17, 14, .62); border: 1px solid rgba(199, 239, 143, .3); border-radius: 22px; display: flex; gap: 32px; justify-content: space-between; margin: 38px auto 0; max-width: 710px; padding: 26px 30px; text-align: left; }
+.access-card > div:first-child { min-width: 0; }
+.access-card > div:first-child > span { color: var(--lime); font-family: var(--mono); font-size: .68rem; font-weight: 700; letter-spacing: .12em; }
+.access-card p { color: #b4c3b9; font-size: .92rem; line-height: 1.55; margin: 10px 0 0; max-width: 370px; }
+.price { flex: 0 0 auto; text-align: right; }
+.price strong { color: var(--lime-hi); display: block; font-size: clamp(2.8rem, 5vw, 4.5rem); font-weight: 550; letter-spacing: -.075em; line-height: .9; }
+.price span { color: #a2b3a8; display: block; font-family: var(--mono); font-size: .7rem; margin-top: 8px; }
 .feature-trio .break-time { font-size: clamp(2.2rem, 4vw, 3.8rem); }
+@media (max-width: 980px) {
+  .customise-layout { grid-template-columns: 1fr 1fr; }
+  .menu-shot { max-width: none; }
+  .calibration-band { grid-template-columns: 1fr; }
+  .calibration-copy { padding: 0 12px 12px; }
+}
+@media (max-width: 740px) {
+  .product { padding: 60px 0; }
+  .product-disclaimer { padding-left: 20px; padding-right: 20px; }
+  .menu-shot { margin: 12px 0 0; transform: none; }
+  .customise-layout { grid-template-columns: 1fr; margin-top: 30px; }
+  .settings-shot { max-width: 570px; }
+  .calibration-band { border-radius: 18px; margin-top: 14px; padding: 14px; }
+  .calibration-copy { padding: 10px 8px 16px; }
+  .access-card { align-items: flex-start; flex-direction: column; gap: 24px; padding: 24px; }
+  .price { text-align: left; }
+}
 @media (max-width: 470px) {
-  .nav-cta.conversion-link { font-size: .7rem; height: auto; min-height: 36px; padding: 7px 10px; width: auto; }
   .download-section { padding: 60px 0; }
 }

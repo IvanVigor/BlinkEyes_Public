@@ -37,18 +37,10 @@
           <div class="hero-actions"><a class="button" href="#product">See how it works</a><a class="button ghost" href="privacy/">Privacy, by design</a></div>
           <div class="hero-proof"><span><i class="proof-icon" aria-hidden="true"></i>Menu-bar estimate</span><span><i class="proof-icon" aria-hidden="true"></i>Visual reminders</span><span><i class="proof-icon" aria-hidden="true"></i>On-device session</span></div>
         </div>
-        <div class="hero-visual" role="group" aria-label="Example live blink monitor">
-          <div class="live-panel">
-            <div class="live-panel-top"><span>Current session</span><b><i aria-hidden="true"></i> Active</b></div>
-            <div class="menu-bar-preview"><span>Blink Eyes</span><strong>18 <small>blink/min</small></strong></div>
-            <div class="live-reading">
-              <div class="live-reading-copy"><span>Recent blink rate</span><strong>18</strong><p>estimated blinks<br>in the last 60 seconds</p></div>
-              <div class="live-pulse" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-            </div>
-            <div class="live-status"><span><i aria-hidden="true"></i>Camera in use</span><span><i aria-hidden="true"></i>Reminder ready</span><span><i aria-hidden="true"></i>Session only</span></div>
-            <div class="live-panel-bottom"><span>Updates while Blink Eyes is open</span><b>Example display</b></div>
-          </div>
-        </div>
+        <figure class="app-shot menu-shot">
+          <div class="app-shot-frame"><img src="assets/menu-panel.png" alt="Blink Eyes menu showing the recent blink estimate, reminder controls and quick actions." width="894" height="956"></div>
+          <figcaption>A real Blink Eyes session · estimates update while the app is open</figcaption>
+        </figure>
       </div>
     </section>
 
@@ -68,22 +60,33 @@
     <section class="made-for-you" id="personalise" aria-labelledby="personalise-title">
       <div class="container">
         <p class="section-label">Settings &amp; privacy</p>
-        <h2 class="simple-heading" id="personalise-title">Set your preferences.<br>Keep control.</h2>
-        <div class="assurance-grid">
+        <h2 class="simple-heading" id="personalise-title">Make it feel<br>like yours.</h2>
+        <div class="customise-layout">
           <article class="assurance-card personal-card" aria-labelledby="calibration-title">
-            <div class="assurance-top"><span class="detail-label">For this session</span><span class="calibration-mark" aria-hidden="true"><i></i></span></div>
-            <h3 id="calibration-title">Tune the cue.<br>Keep the control.</h3>
-            <p>Choose how Blink Eyes behaves while it is open. Guided calibration can refine the estimate for the active session, then it is discarded when you quit.</p>
+            <div class="assurance-top"><span class="detail-label">A lot to make your own</span><span class="calibration-mark" aria-hidden="true"><i></i></span></div>
+            <h3 id="calibration-title">Your cue.<br>Your way.</h3>
+            <p>Set Blink Eyes up around the way you work, then keep the controls close at hand from the menu bar.</p>
             <dl class="settings-overview">
               <div><dt>Reminder timing</dt><dd>Choose when the next visual cue appears after a blink.</dd></div>
-              <div><dt>Detection sensitivity</dt><dd>Adjust from 0–100% if blinks are missed or extra ones are counted.</dd></div>
-              <div><dt>On-screen reminder</dt><dd>Show or hide the visual cue.</dd></div>
-              <div><dt>Background dimming</dt><dd>Turn it on or off; choose its strength and fade duration.</dd></div>
-              <div><dt>Camera &amp; breaks</dt><dd>Select a camera and enable optional look-away reminders.</dd></div>
+              <div><dt>Detection sensitivity</dt><dd>Adjust it from 0–100% if blinks are missed or extra ones are counted.</dd></div>
+              <div><dt>On-screen reminder</dt><dd>Show a cue, dim the background, and tune its strength and fade.</dd></div>
+              <div><dt>Camera &amp; breaks</dt><dd>Choose your camera and enable optional 20-20-20 look-away reminders.</dd></div>
             </dl>
-            <p class="detail-note">Need to check your setup? Open the optional live Preview from the menu. These choices, calibration values and estimates live only in memory for this session.</p>
+            <p class="detail-note">The optional live Preview and guided calibration help you check the setup. Calibration values and estimates stay in memory for the current session.</p>
             <a class="detail-link" href="support/">Setup help <span aria-hidden="true">↗</span></a>
           </article>
+          <figure class="app-shot settings-shot">
+            <div class="app-shot-frame"><img src="assets/settings-panel.png" alt="Blink Eyes settings with reminder timing, detection sensitivity, background dimming, camera choice and 20-20-20 breaks." width="1094" height="1274"></div>
+            <figcaption>Fine-grained settings, without leaving your Mac</figcaption>
+          </figure>
+        </div>
+        <div class="calibration-band">
+          <figure class="app-shot calibration-shot">
+            <div class="app-shot-frame"><img src="assets/calibration-panel.png" alt="Blink Eyes guided calibration screen asking the user to look at the screen." width="1108" height="854"></div>
+          </figure>
+          <div class="calibration-copy"><span class="detail-label">Guided calibration</span><h3>A little setup.<br>A better fit.</h3><p>Take a short guided check to help Blink Eyes understand your eyes in the current session. Everything stays local and disappears when you quit.</p></div>
+        </div>
+        <div class="assurance-grid privacy-grid-row">
           <article class="assurance-card privacy-card" aria-labelledby="privacy-title">
             <div class="assurance-top"><span class="detail-label">Privacy, without compromise</span><svg class="privacy-lock" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="7" y="14" width="18" height="14" rx="4"></rect><path d="M11 14V9a5 5 0 0 1 10 0v5M16 19v4"></path></svg></div>
             <h3 id="privacy-title">Your camera.<br>Never our content.</h3>
@@ -101,12 +104,14 @@
 
     <section class="download-section" id="download" aria-labelledby="download-title">
       <div class="container download-inner">
-        <p class="section-label">Private by architecture</p>
-        <h2 class="simple-heading" id="download-title">Your camera stays<br>on your Mac.</h2>
-        <p class="lead">Blink Eyes uses Apple camera and vision frameworks locally. It does not record, upload or retain camera images, facial landmarks or blink analysis.</p>
-        <div class="hero-actions">
-          <a class="button download-button" href="privacy/">Read the privacy policy</a>
+        <p class="section-label">Annual access</p>
+        <h2 class="simple-heading" id="download-title">Try the rhythm.<br>Keep what works.</h2>
+        <div class="access-card">
+          <div><span>3 DAYS FREE</span><p>Take Blink Eyes through a few real workdays before you decide.</p></div>
+          <div class="price"><strong>€4.99</strong><span>per year</span></div>
         </div>
+        <p class="lead">After the free trial, annual access is €4.99. Purchases, billing and cancellation are handled by Apple.</p>
+        <div class="hero-actions"><a class="button download-button" href="terms/">Read the terms</a><a class="button ghost" href="privacy/">Privacy, by design</a></div>
         <p class="download-requirements">No ads · No tracking · No app account · No cloud sync</p>
       </div>
     </section>
