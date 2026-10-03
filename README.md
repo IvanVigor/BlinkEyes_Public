@@ -8,6 +8,7 @@ Blink Eyes shows your recent blink-rate estimate in the Mac menu bar, offers con
 
 - [Discover Blink Eyes](https://ivanvigor.github.io/BlinkEyes_Public/)
 - [Privacy Policy](https://ivanvigor.github.io/BlinkEyes_Public/privacy/)
+- [Terms of Use](https://ivanvigor.github.io/BlinkEyes_Public/terms/)
 - [Support](https://ivanvigor.github.io/BlinkEyes_Public/support/)
 
 The former documentation URL redirects to the product landing page.
