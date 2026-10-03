@@ -2,7 +2,7 @@
 
 Official marketing website, privacy policy and customer support for Blink Eyes on Mac.
 
-Blink Eyes shows your recent blink-rate estimate in the Mac menu bar, offers configurable visual reminders and optional 20-20-20 break cues, and lets you explore your activity in Statistics. Settings include camera selection, reminder timing, sensitivity, background dimming and break intervals.
+Blink Eyes shows a recent blink-rate estimate in the Mac menu bar, offers configurable visual reminders and optional 20-20-20 break cues. Settings include camera selection, reminder timing, sensitivity, background dimming and break intervals for the active session.
 
 ## Official pages
 

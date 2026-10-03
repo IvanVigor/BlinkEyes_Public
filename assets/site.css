@@ -279,8 +279,7 @@ main.page-shell { min-height: 70vh; padding-bottom: 110px; padding-top: 90px; }
 }
 
 @media (max-width: 470px) {
-  .nav-cta { font-size: 0; height: 36px; padding: 0; width: 36px; }
-  .nav-cta span { font-size: .8rem; }
+  .nav-cta { font-size: .7rem; height: auto; min-height: 36px; padding: 7px 10px; width: auto; }
   .hero-proof { display: grid; grid-template-columns: 1fr 1fr; }
   .live-panel-bottom span { max-width: 180px; }
   .privacy-matrix, .info-grid { grid-template-columns: 1fr; }
