@@ -2,7 +2,7 @@
 
 Official marketing website, privacy policy and customer support for Blink Eyes on Mac.
 
-Blink Eyes uses the Mac camera locally to analyse recent blinks, show a blink-rate estimate in the menu bar and provide configurable visual reminders and optional 20-20-20 break cues. A seven-day free trial lets people try the app before deciding. Settings include camera selection, reminder timing, sensitivity, background dimming and break intervals for the active session.
+Blink Eyes uses the Mac camera locally to analyse recent blinks, show a blink-rate estimate in the menu bar and provide configurable visual reminders and optional 20-20-20 break cues. A seven-day free trial lets people try the app before deciding. It requires a Mac with Apple silicon and macOS 14 or later. Settings include camera selection, reminder timing, sensitivity, background dimming and break intervals for the active session.
 
 ## Official pages
 
