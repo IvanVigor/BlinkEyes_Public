@@ -13,6 +13,6 @@ BlinkTide uses the Mac camera locally to analyse recent blinks, show a blink-rat
 
 The former documentation URL redirects to the product landing page.
 
-Contact: [info@kerny.it](mailto:info@kerny.it)
+Developer and publisher: Ivan Vigorito · Contact: [info@kerny.it](mailto:info@kerny.it)
 
 BlinkTide is a productivity reminder, not intended for medical use. Blink estimates are not health measurements.
