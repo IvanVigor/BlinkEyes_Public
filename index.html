@@ -14,7 +14,7 @@
   <meta name="twitter:description" content="Choose local camera detection or a camera-free timer with a gentle chime, all handled on your Mac.">
   <meta name="twitter:image" content="https://ivanvigor.github.io/BlinkEyes_Public/assets/og-marketing.png">
   <title>BlinkTide: Eyes in Rhythm · Private focus on your Mac</title>
-  <link rel="stylesheet" href="assets/site.css">
+  <link rel="stylesheet" href="assets/site.css?v=20261106-2">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -32,14 +32,29 @@
       <div class="container hero-layout">
         <div class="hero-copy">
           <p class="eyebrow"><span class="status-dot"></span> BlinkTide: Eyes in Rhythm</p>
-          <h1 id="hero-title">Eyes in rhythm.<br><span>Private focus on your Mac.</span></h1>
-          <p class="lead">Choose local camera detection to estimate your recent blink rhythm, or use a camera-free timer. At each timer interval, the menu-bar eye blinks green and BlinkTide plays a short, gentle chime.</p>
-          <div class="hero-actions"><a class="button" href="#product">See how it works</a><a class="button ghost" href="privacy/">Privacy, by design</a></div>
+          <h1 id="hero-title">Blink. Refocus.<br><span>Stay in your flow.</span></h1>
+          <p class="lead">A private Mac companion that notices when your eyes need a gentler rhythm. Choose local camera detection or a camera-free timer—and let one quiet cue bring you back.</p>
+          <div class="hero-actions"><a class="button" href="#product">See BlinkTide in action</a><a class="button ghost" href="privacy/">Privacy, by design</a></div>
           <div class="hero-proof"><span><i class="proof-icon" aria-hidden="true"></i>Camera or timer mode</span><span><i class="proof-icon" aria-hidden="true"></i>Gentle visual + sound cues</span><span><i class="proof-icon" aria-hidden="true"></i>On-device session</span></div>
         </div>
-        <figure class="app-shot menu-shot">
-          <div class="app-shot-frame"><img src="assets/menu-panel.png" alt="BlinkTide menu showing the recent blink estimate, reminder controls and quick actions." width="894" height="956"></div>
-          <figcaption>A real BlinkTide session · estimates update while the app is open</figcaption>
+        <figure class="mac-demo" aria-labelledby="mac-demo-caption">
+          <div class="mac-aura" aria-hidden="true"></div>
+          <div class="macbook">
+            <div class="mac-lid">
+              <div class="mac-camera" aria-hidden="true"></div>
+              <div class="mac-screen">
+                <img src="assets/menu-panel.png" alt="BlinkTide running privately in the Mac menu bar while the screen remains visible." width="894" height="956">
+                <div class="screen-dim" aria-hidden="true"></div>
+                <div class="screen-state screen-state-waiting" aria-hidden="true"><i></i><span>No blink yet</span><strong>Softly dimming</strong></div>
+                <div class="blink-cue" aria-hidden="true">
+                  <svg viewBox="0 0 64 40" role="presentation"><path d="M4 20C12 7 21 3 32 3s20 4 28 17c-8 13-17 17-28 17S12 33 4 20Z"></path><circle cx="32" cy="20" r="7"></circle></svg>
+                  <span>Blink detected</span><strong>Welcome back</strong>
+                </div>
+              </div>
+            </div>
+            <div class="mac-base" aria-hidden="true"><span></span></div>
+          </div>
+          <figcaption id="mac-demo-caption"><span>See the gentle nudge</span> The screen softens when a blink is overdue, then clears the moment BlinkTide detects one.</figcaption>
         </figure>
       </div>
     </section>
@@ -52,7 +67,7 @@
           <article class="feature-card"><span class="card-index">01 / CAMERA DETECTION</span><div class="feature-highlight" aria-hidden="true">60<span>seconds</span></div><h3>Your recent rhythm, at a glance.</h3><p>Using your Mac’s camera locally, BlinkTide analyses blinks from the last 60 seconds. It is a live session signal, not a health measurement or a record of your day.</p></article>
           <article class="feature-card"><span class="card-index">02 / CAMERA-FREE TIMER</span><div class="feature-highlight" aria-hidden="true">Blink.<span>See it. Hear it.</span></div><h3>A gentle cue, without the camera.</h3><p>Choose a timer interval and keep the camera off. When time is up, the menu-bar eye blinks green and a short, pleasant chime plays once.</p></article>
           <article class="feature-card"><span class="card-index">03 / SCREEN BREAKS</span><div class="feature-highlight" aria-hidden="true">20–20–20<span>Optional look-away cues</span></div><h3>Make room for a pause.</h3><p>Enable a separate cue to look away from the screen. Choose an interval that suits your routine; it is off until you turn it on.</p></article>
-          <article class="feature-card feature-card-dark"><span class="card-index">04 / QUICK CONTROL</span><div class="feature-highlight feature-periods" aria-hidden="true">⌃⌥⌘B<span>Start or pause</span></div><h3>Camera detection, one shortcut away.</h3><p>Press Control–Option–Command–B to start or pause webcam detection. The optional local Preview remains available to check lighting, glasses and head position.</p></article>
+          <article class="feature-card feature-card-dark"><span class="card-index">04 / QUICK CONTROL</span><div class="feature-highlight feature-periods" aria-hidden="true">⌥⌘B<span>Start or pause</span></div><h3>Camera detection, one shortcut away.</h3><p>Press Option–Command–B to start or pause webcam detection. The optional local Preview remains available to check lighting, glasses and head position.</p></article>
         </div>
       </div>
     </section>
@@ -72,7 +87,7 @@
               <div><dt>Timer cue</dt><dd>Choose the interval for the green eye animation and gentle chime.</dd></div>
               <div><dt>Camera, timer &amp; breaks</dt><dd>Choose your mode and enable optional 20-20-20 look-away reminders.</dd></div>
             </dl>
-            <p class="detail-note">The optional live Preview and guided calibration help you check camera detection. Press Control–Option–Command–B anytime to start or pause it. Calibration values and estimates stay in memory for the current session.</p>
+            <p class="detail-note">The optional live Preview and guided calibration help you check camera detection. Press Option–Command–B anytime to start or pause it. Calibration values and estimates stay in memory for the current session.</p>
             <a class="detail-link" href="support/">Setup help <span aria-hidden="true">↗</span></a>
           </article>
           <figure class="app-shot settings-shot">
