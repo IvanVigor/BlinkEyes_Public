@@ -151,9 +151,9 @@
   .stage::after { display: none; }
   .stage-copy { order: 1; padding-bottom: 36px; padding-top: 52px; }
   .home h1 { font-size: clamp(3rem, 14.5vw, 5.4rem); }
-  /* Below this width the desktop is cropped and zoomed on the menu so it stays readable. */
-  .stage-screen { height: 380px; order: 2; overflow: hidden; position: relative; }
-  .stage-screen img { height: auto; inset: 0 0 auto auto; max-width: none; object-fit: fill; width: 270%; }
+  /* Below this width a dedicated, lighter crop of the menu replaces the full desktop. */
+  .stage-screen { order: 2; position: relative; }
+  .stage-screen img { height: min(90vw, 440px); inset: auto; object-position: right top; position: static; }
   .stage-blink { display: none; }
   .promise-strip { justify-content: flex-start; }
   .step { grid-template-columns: 1fr; }
@@ -162,6 +162,12 @@
   .flow-cut { height: 76px; }
   .flow-cut::before { border-left: 2px dashed rgba(12, 26, 21, .3); border-top: 0; bottom: 0; left: 50%; right: auto; top: 0; }
   .flow-out { align-self: stretch; }
+}
+
+@media (max-width: 740px) {
+  /* The phone header scrolls away (see site.css), so anchors need no offset for it. */
+  .home section[id] { scroll-margin-top: 12px; }
+  .privacy-more { padding: 12px 0; }
 }
 
 @media (max-width: 560px) {

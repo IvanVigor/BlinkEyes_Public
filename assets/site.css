@@ -518,3 +518,17 @@ main.compact-page { padding-bottom: 70px; padding-top: 58px; }
 @media (max-width: 470px) {
   .download-section { padding: 60px 0; }
 }
+
+/* Phone layout: room to read, and links that are easy to tap. */
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+@media (max-width: 740px) {
+  .site-header { position: static; }
+  .site-header .brand { min-height: 44px; }
+  .site-header .nav-links { padding: 0 0 6px; row-gap: 0; }
+  .site-header .nav-links a { align-items: center; display: inline-flex; font-size: .88rem; min-height: 44px; padding: 0; }
+  .site-header .nav-cta { font-size: .82rem; min-height: 44px; padding: 0 16px; }
+  .footer-layout .brand { min-height: 44px; }
+  .footer-layout p { font-size: .85rem; }
+  .footer-links { flex-wrap: wrap; gap: 0 24px; }
+  .footer-links a { align-items: center; display: inline-flex; font-size: .88rem; min-height: 44px; }
+}
