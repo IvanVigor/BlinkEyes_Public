@@ -2,7 +2,7 @@
 
 Official marketing website, privacy policy and customer support for BlinkTide on Mac.
 
-BlinkTide uses the Mac camera locally to analyse recent blinks, or a camera-free timer, and provides configurable visual and sound reminders plus optional 20-20-20 break cues. A seven-day local trial lets people try every feature before a one-time €8.99 lifetime purchase. It requires a Mac with Apple silicon and macOS 14 or later. Settings include reminder mode, camera selection, timing, sensitivity, background dimming and break intervals for the active session.
+BlinkTide uses the Mac camera locally to analyse recent blinks, or a camera-free timer, and provides configurable visual and sound reminders plus optional 20-20-20 break cues. A seven-day local trial lets people try every feature before a one-time €9.99 lifetime purchase. It requires a Mac with Apple silicon and macOS 14 or later. Settings include reminder mode, camera selection, timing, sensitivity, background dimming and break intervals for the active session.
 
 ## Official pages
 
