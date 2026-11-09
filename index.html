@@ -15,6 +15,10 @@
   <meta name="twitter:description" content="Camera-based blink detection or a simple timer, right in your menu bar. Blink detection runs on your Mac. Free for 7 days, then €9.99 once.">
   <meta name="twitter:image" content="https://blinktide.kerny.it/assets/og-blinktide.jpg">
   <title>BlinkTide · Blink reminders for your Mac</title>
+  <link rel="canonical" href="https://blinktide.kerny.it/">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "BlinkTide", "operatingSystem": "macOS 14 or later (Apple silicon)", "applicationCategory": "UtilitiesApplication", "description": "A Mac menu bar app that reminds you to blink, using on-device camera detection or a simple timer.", "url": "https://blinktide.kerny.it/", "image": "https://blinktide.kerny.it/assets/app-icon.png", "offers": {"@type": "Offer", "price": "9.99", "priceCurrency": "EUR"}}</script>
   <link rel="stylesheet" href="assets/site.css">
   <link rel="stylesheet" href="assets/home.css">
 </head>
@@ -23,7 +27,7 @@
   <header class="site-header">
     <nav class="nav" aria-label="Main navigation">
       <a class="brand" href="./" aria-label="BlinkTide home"><span class="brand-signal" aria-hidden="true"><i></i><i></i><i></i></span><span>BlinkTide</span></a>
-      <div class="nav-links"><a href="#how-it-works">How it works</a><a href="#features">Features</a><a href="#privacy">Privacy</a><a href="#pricing">Pricing</a></div>
+      <div class="nav-links"><a href="#how-it-works">How it works</a><a href="#features">Features</a><a href="#privacy">Privacy</a><a href="#faq">FAQ</a><a href="#pricing">Pricing</a></div>
       <a class="nav-cta conversion-link" href="#pricing">Try it free</a>
     </nav>
   </header>
@@ -86,7 +90,7 @@
             <div class="step-copy">
               <span class="step-number" aria-hidden="true">3</span>
               <h3>Get reminded when it's time.</h3>
-              <p>In camera mode, a reminder appears when BlinkTide doesn't detect a blink. In timer mode, you get a sound and an on-screen reminder at the interval you chose. To pause reminders at any time, press <kbd>⌥⌘B</kbd>.</p>
+              <p>In camera mode, a reminder appears when BlinkTide hasn't detected a blink for the time you set. In timer mode, a gentle chime plays and the eye in the menu bar blinks green at the interval you chose. To pause reminders at any time, press <kbd>⌥⌘B</kbd>.</p>
             </div>
             <figure class="shot"><img src="assets/screens/step-blink.png" width="1382" height="1083" loading="lazy" alt="A dimmed screen with the on-screen reminder Blink at the bottom center."></figure>
           </li>
@@ -110,6 +114,8 @@
                 <li>Adjustable detection sensitivity</li>
                 <li>Automatic calibration, or start it yourself</li>
                 <li>Optional camera preview</li>
+                <li>Choose which camera to use</li>
+                <li>Optional look-away breaks, every 5 to 60 minutes</li>
                 <li>Turn the camera on or off at any time</li>
               </ul>
             </div>
@@ -119,10 +125,10 @@
           <article class="mode mode-timer">
             <p class="mode-tag">Timer mode</p>
             <h3>Periodic reminders, no camera needed.</h3>
-            <p>Choose an interval and BlinkTide reminds you each time it elapses.</p>
+            <p>Choose an interval and BlinkTide reminds you each time it elapses. The camera stays off.</p>
             <ul class="ticks">
-              <li>Sound notification</li>
-              <li>On-screen reminder</li>
+              <li>A gentle chime</li>
+              <li>A green eye cue in the menu bar</li>
             </ul>
             <ul class="intervals" aria-label="Timer intervals">
               <li>30<small>sec</small></li>
@@ -138,18 +144,23 @@
             <div>
               <p class="mode-tag">Customization</p>
               <h3>Set up the missed-blink reminder your way.</h3>
-              <p>When a blink is missed, BlinkTide shows a reminder. You can customize all of it, from the message on screen to how much the background dims.</p>
+              <p>In camera mode, you decide how long BlinkTide waits, whether the on-screen message appears and how much the background dims.</p>
             </div>
             <div class="custom-tiles">
               <div class="custom-tile">
-                <span class="custom-label">Reminder message</span>
+                <span class="custom-label">Reminder delay</span>
+                <strong class="custom-message">3–20 s</strong>
+                <span class="custom-note">Time without a blink before it appears.</span>
+              </div>
+              <div class="custom-tile">
+                <span class="custom-label">On-screen message</span>
                 <strong class="custom-message">Blink.</strong>
-                <span class="custom-note">Or write your own.</span>
+                <span class="custom-note">Show it or hide it.</span>
               </div>
               <div class="custom-tile">
                 <span class="custom-label">Background dimming</span>
                 <span class="custom-dim" aria-hidden="true"></span>
-                <span class="custom-note">Choose how dark it gets.</span>
+                <span class="custom-note">Set its strength and fade.</span>
               </div>
             </div>
           </article>
@@ -204,6 +215,37 @@
             <h3>Detection sensitivity</h3>
             <p>If blinks are missed or counted too often, adjust the sensitivity slider right from the menu.</p>
           </article>
+
+          <article class="advanced-card">
+            <svg class="drawing" viewBox="0 0 320 180" aria-hidden="true">
+              <defs><clipPath id="eye-down"><path d="M78 76Q160 26 242 76Q160 126 78 76Z"/></clipPath></defs>
+              <path class="draw-eye-shape" d="M78 76Q160 26 242 76Q160 126 78 76Z"/>
+              <g clip-path="url(#eye-down)"><circle class="draw-iris" cx="160" cy="98" r="25"/><circle class="draw-pupil" cx="160" cy="102" r="10"/></g>
+              <path class="draw-bob" d="M140 136l20 16 20-16"/>
+            </svg>
+            <h3>Made for reading and typing</h3>
+            <p>BlinkTide is designed to tell a blink from a downward glance at your keyboard, and to keep up as your head moves.</p>
+          </article>
+
+          <article class="advanced-card">
+            <svg class="drawing" viewBox="0 0 320 180" aria-hidden="true">
+              <circle class="draw-dash" cx="120" cy="70" r="28"/>
+              <path class="draw-dash" d="M70 150c4-34 24-48 50-48s46 14 50 48"/>
+              <rect class="draw-pause" x="218" y="62" width="14" height="56" rx="5"/>
+              <rect class="draw-pause" x="244" y="62" width="14" height="56" rx="5"/>
+            </svg>
+            <h3>Quiet when you step away</h3>
+            <p>If your face isn't in view, camera reminders hold off. You won't come back to a screen asking you to blink.</p>
+          </article>
+
+          <article class="advanced-card">
+            <svg class="drawing" viewBox="0 0 320 180" aria-hidden="true">
+              <rect class="draw-pill" x="44" y="42" width="232" height="44" rx="22"/><circle class="draw-pupil" cx="70" cy="64" r="6"/><text class="draw-pill-text" x="88" y="70">Eyes detected</text>
+              <rect class="draw-pill" x="44" y="96" width="232" height="44" rx="22"/><circle class="draw-pupil" cx="70" cy="118" r="6"/><text class="draw-pill-text" x="88" y="124">Ready to count blinks</text>
+            </svg>
+            <h3>A preview that explains itself</h3>
+            <p>The optional Camera Preview tells you whether your eyes are detected and suggests what to fix, such as low light.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -238,21 +280,50 @@
       </div>
     </section>
 
+    <section class="section faq" id="faq" aria-labelledby="faq-title">
+      <div class="container faq-layout">
+        <div>
+          <p class="kicker">FAQ</p>
+          <h2 id="faq-title">Before you<br>try it.</h2>
+          <p class="faq-help">Still have a question? <a href="support/">Visit Support</a> or write to <a href="mailto:info@kerny.it">info@kerny.it</a>.</p>
+        </div>
+        <div class="faq-items">
+          <details><summary>Does BlinkTide record or upload my camera?</summary><p>No. Camera frames are processed in memory on your Mac and BlinkTide doesn't use facial recognition. No camera image, blink measurement or BlinkTide content leaves your Mac.</p></details>
+          <details><summary>Do I have to use the camera?</summary><p>No. Timer mode keeps the camera off and reminds you with a gentle chime and a green eye cue in the menu bar, from every 30 seconds to every 15 minutes.</p></details>
+          <details><summary>How accurate is the blink count?</summary><p>It's an estimate, not an exact count. Lighting, eyewear and camera position can affect it. Camera Preview shows how well your eyes are detected, and you can adjust the sensitivity at any time.</p></details>
+          <details><summary>What happens when the free trial ends?</summary><p>You start the trial through the App Store with no charge, and nothing renews automatically. After 7 days, continuing to use BlinkTide requires a one-time €9.99 purchase. The trial is available once per Apple Account.</p></details>
+          <details><summary>Is there a subscription?</summary><p>No. You pay €9.99 once, and access doesn't expire or renew. Apple handles the payment and restoring your purchase.</p></details>
+          <details><summary>Do I need an account?</summary><p>You don't need a BlinkTide account. The free trial and the purchase use your Apple Account.</p></details>
+          <details><summary>Does it work without an internet connection?</summary><p>Blink detection doesn't need an internet connection. Starting the trial, buying and restoring your purchase go through Apple.</p></details>
+          <details><summary>Does BlinkTide remember my settings?</summary><p>Settings and calibration last for the current session and are discarded when you quit the app. BlinkTide keeps no history of your blinks.</p></details>
+          <details><summary>Which Macs are supported?</summary><p>BlinkTide requires a Mac with Apple silicon and macOS 14 or later. Camera mode needs a camera; you can choose which one to use in Settings.</p></details>
+          <details><summary>Is BlinkTide a medical product?</summary><p>No. BlinkTide is a productivity reminder. It isn't a medical device, doesn't diagnose any condition and isn't a substitute for advice from a healthcare professional.</p></details>
+        </div>
+      </div>
+    </section>
+
     <section class="section pricing" id="pricing" aria-labelledby="price-title">
       <div class="container pricing-layout">
         <div>
           <p class="kicker">Launch price</p>
           <h2 id="price-title">Pay once.<br>No subscription.</h2>
           <p class="pricing-lead">Try BlinkTide free for 7 days. To keep using it, buy BlinkTide Lifetime with a single one-time purchase.</p>
+          <ol class="trial-steps">
+            <li><strong>Today</strong>Start the free trial through the App Store. No charge.</li>
+            <li><strong>For 7 days</strong>Use every feature, in camera and timer mode.</li>
+            <li><strong>After 7 days</strong>Keep BlinkTide for €9.99 once, or simply stop. Nothing renews.</li>
+          </ol>
         </div>
         <div class="price-card">
-          <p class="price-name">BlinkTide Lifetime</p>
+          <p class="price-name"><img src="assets/app-icon.png" width="44" height="44" loading="lazy" alt="">BlinkTide Lifetime</p>
           <p class="price-now">€9.99</p>
           <p class="price-next">Launch price. Will increase to <strong>€16.99</strong>.</p>
           <ul class="ticks">
             <li>7-day free trial</li>
             <li>One-time purchase</li>
             <li>No subscription</li>
+            <li>Camera and timer modes included</li>
+            <li>Restore your purchase through Apple</li>
           </ul>
           <!-- Enable only after the official distribution URL is confirmed. -->
           <button class="button download-button" type="button" disabled aria-describedby="download-status">Start free trial</button>
