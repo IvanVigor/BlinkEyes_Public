@@ -11,16 +11,32 @@
 
 /* Hero: the page opens on the real Mac desktop, and the reminder plays on it. */
 .stage { aspect-ratio: 16 / 9; display: flex; min-height: 640px; overflow: hidden; position: relative; width: 100%; }
-.stage-screen, .stage-screen img { inset: 0; position: absolute; }
-.stage-screen img { height: 100%; object-fit: cover; object-position: right top; width: 100%; }
-.stage-blink { animation: stage-blink 11s ease-in-out infinite; opacity: 0; }
+.stage-screen { inset: 0; position: absolute; }
+/* The artwork keeps the screenshot's own proportions so the menu overlay lines up with it. */
+.stage-art { aspect-ratio: 3750 / 2160; position: absolute; right: 0; top: 0; width: max(100%, 1111.1px); }
+.stage-art img { position: absolute; }
+.stage-menu { height: 100%; left: 0; top: 0; width: 100%; }
+.stage-pop { height: 46.759%; left: 70.533%; top: 0; width: 29.467%; }
+.stage-pop { animation: stage-pop 12s ease-in-out infinite; clip-path: inset(0 0 100% 0); }
+.stage-blink { animation: stage-blink 12s linear infinite; inset: 0; opacity: 0; position: absolute; }
+.stage-dim { background: rgba(0, 0, 0, .5); inset: 0; position: absolute; }
+/* The real reminder card, placed where the app shows it: centred, low on the screen. */
+.stage-card { border-radius: 8.04% / 19.83%; height: 10.741%; left: 41.173%; top: 79.259%; width: 15.253%; }
+.stage-lid { background: #050b09; height: 50.5%; left: 0; position: absolute; right: 0; transform: scaleY(0); }
+.stage-lid-top { animation: stage-lid 12s ease-in-out infinite; border-radius: 0 0 50% 50% / 0 0 24% 24%; top: 0; transform-origin: top; }
+.stage-lid-bottom { animation: stage-lid 12s ease-in-out infinite; border-radius: 50% 50% 0 0 / 24% 24% 0 0; bottom: 0; transform-origin: bottom; }
 .stage::after { background: linear-gradient(90deg, rgba(7, 17, 14, .9) 0, rgba(7, 17, 14, .68) 34%, rgba(7, 17, 14, 0) 62%), linear-gradient(0deg, var(--night) 0, rgba(7, 17, 14, 0) 12%); content: ""; inset: 0; pointer-events: none; position: absolute; }
 .stage-copy { padding-top: clamp(56px, 8.5vw, 150px); position: relative; width: 100%; z-index: 1; }
 .stage-copy h1 span { color: var(--lime-hi); }
 .stage-lead { color: #dfe6da; font-size: clamp(1.05rem, 1.45vw, 1.32rem); letter-spacing: -.015em; line-height: 1.5; margin-bottom: 0; max-width: 27em; text-wrap: pretty; }
 .stage-price { color: #c5d1c6; font-size: .95rem; margin: 18px 0 0; }
 .stage-price strong { color: var(--cream); }
-@keyframes stage-blink { 0%, 62% { opacity: 0; } 67%, 86% { opacity: 1; } 91%, 100% { opacity: 0; } }
+/* One 12 s loop: the menu drops open, closes, then the eyes blink into the reminder. */
+@keyframes stage-pop { 0%, 9% { clip-path: inset(0 0 100% 0); transform: translateY(-10px); } 15%, 48% { clip-path: inset(0 0 0 0); transform: translateY(0); } 53%, 100% { clip-path: inset(0 0 100% 0); transform: translateY(-10px); } }
+@keyframes stage-lid { 0%, 1.5% { transform: scaleY(0); } 2.6% { transform: scaleY(1); } 3.8%, 57.5% { transform: scaleY(0); } 59.3% { transform: scaleY(1); } 61%, 100% { transform: scaleY(0); } }
+@keyframes stage-blink { 0%, 59.2% { opacity: 0; } 59.6%, 84% { opacity: 1; } 89%, 100% { opacity: 0; } }
+.home .brand-signal i:nth-child(2) { animation: brand-blink 6s ease-in-out infinite; }
+@keyframes brand-blink { 0%, 90%, 100% { transform: scaleY(1); } 94% { transform: scaleY(.15); } }
 
 .promise-strip { display: flex; flex-wrap: wrap; gap: 12px 36px; justify-content: space-between; list-style: none; margin-bottom: 0; margin-top: 0; padding-bottom: 30px; padding-top: 30px; }
 .promise-strip li { align-items: center; color: #c5d1c6; display: flex; font-size: .95rem; font-weight: 550; gap: 10px; }
@@ -48,13 +64,9 @@
 .mode-camera { align-items: center; display: grid; gap: 36px; grid-template-columns: minmax(0, 1fr) minmax(0, 250px); }
 .mode-tag { color: var(--lime) !important; font-size: .95rem !important; font-weight: 650; margin-bottom: 14px !important; }
 .mode-timer { display: flex; flex-direction: column; }
+.custom-shot { margin: 0; }
+.custom-shot img { border-radius: 16px; box-shadow: 0 24px 60px rgba(0, 0, 0, .35); height: auto; width: 100%; }
 .mode-custom { align-items: center; display: grid; gap: clamp(28px, 4vw, 56px); grid-column: 1 / -1; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }
-.custom-tiles { display: grid; gap: 14px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.custom-tile { background: rgba(177, 217, 123, .1); border-radius: 18px; display: flex; flex-direction: column; min-height: 220px; padding: 22px; }
-.custom-label { color: var(--cream); font-size: 1rem; font-weight: 650; letter-spacing: -.015em; }
-.custom-message { color: var(--cream); font-size: clamp(2.6rem, 4.4vw, 3.8rem); font-weight: 700; letter-spacing: -.04em; margin: auto 0; }
-.custom-dim { background: linear-gradient(90deg, rgba(242, 244, 233, .85), #050b09); border-radius: 10px; display: block; height: 44px; margin: auto 0; }
-.custom-note { color: var(--muted); font-size: .95rem; }
 .ticks { display: grid; gap: 10px; list-style: none; margin: 24px 0 0; padding: 0; }
 .ticks li { color: var(--cream); font-size: 1rem; letter-spacing: -.01em; line-height: 1.4; padding-left: 26px; position: relative; }
 .ticks li::before { border-bottom: 2px solid var(--lime); border-left: 2px solid var(--lime); content: ""; height: 5px; left: 2px; position: absolute; top: .36em; transform: rotate(-45deg); width: 11px; }
@@ -86,6 +98,9 @@
 .draw-fill { animation: draw-fill 7s ease-in-out infinite; fill: var(--lime); transform-origin: 50px 89px; }
 .draw-knob { animation: draw-knob 7s ease-in-out infinite; fill: var(--cream); }
 .draw-scale { fill: var(--muted); font-size: 16px; font-weight: 550; }
+.draw-axis { stroke: rgba(242, 244, 233, .22); stroke-width: 2; }
+.draw-bar { animation: draw-bar 4.8s ease-in-out infinite; fill: var(--lime); transform-box: fill-box; transform-origin: bottom; }
+@keyframes draw-bar { 0%, 100% { transform: scaleY(1); } 50% { transform: scaleY(.55); } }
 @keyframes draw-focus { 0%, 30% { opacity: .35; transform: scale(1.1); } 50%, 100% { opacity: 1; transform: scale(1); } }
 @keyframes draw-blink { 0%, 62%, 70%, 100% { transform: scaleY(1); } 66% { transform: scaleY(.06); } }
 @keyframes draw-click { 0%, 12%, 20%, 100% { transform: scale(1); } 16% { transform: scale(.82); } }
@@ -152,9 +167,11 @@
   .stage-copy { order: 1; padding-bottom: 36px; padding-top: 52px; }
   .home h1 { font-size: clamp(3rem, 14.5vw, 5.4rem); }
   /* Below this width a dedicated, lighter crop of the menu replaces the full desktop. */
-  .stage-screen { order: 2; position: relative; }
-  .stage-screen img { height: min(90vw, 440px); inset: auto; object-position: right top; position: static; }
-  .stage-blink { display: none; }
+  .stage-screen { inset: auto; order: 2; position: relative; }
+  .stage-art { aspect-ratio: auto; position: static; width: auto; }
+  .stage-art img { position: static; }
+  .stage-menu { display: block; height: auto; max-height: 560px; object-fit: cover; object-position: right top; width: 100%; }
+  .stage-blink, .stage-pop, .stage-lid { display: none; }
   .promise-strip { justify-content: flex-start; }
   .step { grid-template-columns: 1fr; }
   .step:nth-child(even) .step-copy { order: 0; }
@@ -173,8 +190,6 @@
 @media (max-width: 560px) {
   .mode-camera { grid-template-columns: 1fr; }
   .mode-shot { justify-self: center; max-width: 250px; }
-  .custom-tiles { grid-template-columns: 1fr; }
-  .custom-tile { min-height: 170px; }
   .flow-mac { padding: 22px 18px 24px; }
   .flow-nodes { gap: 22px; grid-template-columns: 1fr; }
   .flow-nodes span:not(:last-child)::after { height: 22px; left: 50%; top: 100%; width: 2px; }
@@ -182,21 +197,17 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .stage-blink, .drawing * { animation: none; }
+  .stage-blink, .stage-lid, .drawing *, .home .brand-signal i { animation: none; }
+  .stage-pop { animation: none; clip-path: none; }
   .draw-dot-1, .draw-dot-2 { fill: var(--lime); }
 }
 
 /* Added drawings, FAQ and trial timeline */
-.draw-bob { animation: draw-bob 3s ease-in-out infinite; fill: none; stroke: var(--lime); stroke-linecap: round; stroke-linejoin: round; stroke-width: 5; }
 .draw-dash { fill: none; stroke: rgba(242, 244, 233, .42); stroke-dasharray: 6 8; stroke-linecap: round; stroke-width: 3; }
 .draw-pause { fill: var(--lime); }
 .draw-pill { fill: rgba(177, 217, 123, .12); }
 .draw-pill-text { fill: var(--cream); font-size: 17px; font-weight: 600; letter-spacing: -.01em; }
-@keyframes draw-bob { 0%, 100% { transform: translateY(-4px); } 50% { transform: translateY(5px); } }
 
-.custom-tiles { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-.custom-tile { min-height: 200px; padding: 20px; }
-.custom-message { font-size: clamp(2.1rem, 2.9vw, 2.8rem); white-space: nowrap; }
 
 .faq { background: var(--night-2); }
 .faq-layout { align-items: start; display: grid; gap: clamp(36px, 6vw, 90px); grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); }
@@ -224,8 +235,6 @@
   .faq-layout { grid-template-columns: 1fr; }
 }
 @media (max-width: 640px) {
-  .custom-tiles { grid-template-columns: 1fr; }
-  .custom-tile { min-height: 160px; }
 }
 
 /* Compatibility */
@@ -243,3 +252,7 @@
 @media (max-width: 820px) {
   .compat-grid { grid-template-columns: 1fr; }
 }
+
+.draw-bar:nth-of-type(3n) { animation-delay: -1.2s; }
+.draw-bar:nth-of-type(3n + 1) { animation-delay: -2.4s; }
+.draw-bar:nth-of-type(3n + 2) { animation-delay: -3.6s; }
